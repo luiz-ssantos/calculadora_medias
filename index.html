@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Calculadora de médias</title>
+
+    <!-- Importando a fonte Roboto do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <img src="images/logo.png" alt="capelo e diploma" />
+        <h1>Calculadora de médias</h1>
+      </header>
+      <main>
+        <!-- Seção para cadastrar dados -->
+        <section id="cadastrarDados">
+          <form action="" id="formulario">
+            <!-- Entrada para o nome da atividade -->
+            <input
+              type="text"
+              id="nomeAtividade"
+              placeholder="Nome da atividade..."
+            />
+            <!-- Entrada para a nota da atividade -->
+            <input
+              type="number"
+              min="0"
+              max="10"
+              name="notaAtividade"
+              id="notaAtividade"
+              placeholder="Nota"
+            />
+            <!-- Botão para adicionar a atividade -->
+            <button type="submit" id="butaoCadastro">Adicionar +</button>
+          </form>
+        </section>
+        <!-- Seção para listar as notas -->
+        <section id="listaNotas">
+          <table cellspacing="0">
+            <!-- Cabeçalho da tabela -->
+            <thead>
+              <tr>
+                <th>Nome da atividade</th>
+                <th>Nota</th>
+                <th>Aprovado?</th>
+              </tr>
+            </thead>
+            <!-- Corpo da tabela (será preenchido dinamicamente com JavaScript) -->
+            <tbody id="tbody"></tbody>
+            <!-- Rodapé da tabela -->
+            <tfoot>
+              <tr>
+                <td>Média final</td>
+                <td>--</td>
+                <td><samp class="resultado">Aprovado</samp></td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </main>
+    </div>
+    <!-- Rodapé da página -->
+    <footer>
+      &copy;Luiz Henrique - Profissão: Desenvolvedor Full Stack Python
+    </footer>
+    <!-- Script JavaScript -->
+    <script src="main.js"></script>
+  </body>
+</html>
